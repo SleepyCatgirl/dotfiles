@@ -11,7 +11,8 @@ myModKey = mod4Mask
 myBorderWidth = 2
 -- Customize keybindings
 myKeys = [
-  ((myModKey, xK_Return), spawn "emacs"),
+  ((myModKey, xK_Return), spawn "xfce4-terminal"),
+  ((myModKey .|. shiftMask, xK_Return), spawn "emacs"),
   ((myModKey, xK_w), kill),
   ((myModKey, xK_s), spawn "dmenu_run"),
   ((myModKey .|. shiftMask, xK_Print), spawn "sleep 0.2 && scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png -s -e 'xclip -selection clipboard -target image/png -i $f'"),
